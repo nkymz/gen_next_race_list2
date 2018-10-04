@@ -16,17 +16,17 @@ class POHorseList:
         self.ws = self.wb["POHorseList"]
 
     def get(self):
-        trow = 1
+        xlrow = 1
         mylist = []
 
-        while self.ws.cell(row=trow, column=1).value:
+        while self.ws.cell(row=xlrow, column=1).value:
 
-            horse_name = self.ws.cell(row=trow, column=2).value
-            owner_name = self.ws.cell(row=trow, column=1).value
-            horse_id = self.ws.cell(row=trow, column=7).value
-            is_seal = True if self.ws.cell(row=trow, column=6).value == "-" else False
+            horse_name = self.ws.cell(row=xlrow, column=2).value
+            owner_name = self.ws.cell(row=xlrow, column=1).value
+            horse_id = self.ws.cell(row=xlrow, column=7).value
+            is_seal = True if self.ws.cell(row=xlrow, column=6).value == "-" else False
             mylist.append([horse_id, horse_name, owner_name, is_seal])
 
-            trow += 1
+            xlrow += 1
 
         return mylist
