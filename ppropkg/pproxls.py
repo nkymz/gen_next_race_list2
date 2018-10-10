@@ -29,4 +29,6 @@ class POHorseList:
 
             xlrow += 1
 
+        self.wb.close()
+
         return mylist

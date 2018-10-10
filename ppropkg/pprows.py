@@ -10,6 +10,7 @@ import pprint
 NEXT_RACE_INFO_URL = "http://pog-info.com/archives/category/pog/news"
 NEXT_RACE_ARTICLE_URL = "http://pog-info.com/archives/{}"
 
+
 class Soup:
 
     def __init__(self, target_url, parser, seconds):
@@ -37,8 +38,9 @@ def get_next_race_info(article_id):
     next_race_content = soup.get().find("div", class_="single-entry-content")
     return next_race_content
 
+
 def main():
-    get_next_race_info(get_next_race_info_id())
+    pass
 
 
 if __name__ == "__main__":
