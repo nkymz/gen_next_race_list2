@@ -24,7 +24,7 @@ class POHorseList:
             horse_name = self.ws.cell(row=xlrow, column=2).value
             owner_name = self.ws.cell(row=xlrow, column=1).value
             horse_id = self.ws.cell(row=xlrow, column=7).value
-            is_seal = True if self.ws.cell(row=xlrow, column=6).value == "-" else False
+            is_seal = False if self.ws.cell(row=xlrow, column=6).value == "-" else True
             mylist.append([horse_id, horse_name, owner_name, is_seal])
 
             xlrow += 1
